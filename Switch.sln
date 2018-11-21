@@ -14,6 +14,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - API", "4 - API", "{9CA2CE98-18FC-4E53-BFD4-95E877A3DD5A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Presentation", "5 - Presentation", "{32D047C5-D647-46F8-843D-8E5D212AE982}"
+	ProjectSection(SolutionItems) = preProject
+		Script1.js = Script1.js
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Switch.Domain", "Switch.Domain\Switch.Domain.csproj", "{C7039863-40BD-49E0-B8C1-BF5399DE6847}"
 EndProject
