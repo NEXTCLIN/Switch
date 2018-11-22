@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Switch.Infra.Data.Context;
+using Switch.Infra.Data;
 
 namespace Switch.API
 {
@@ -28,6 +28,7 @@ namespace Switch.API
             var conn = Configuration.GetConnectionString("SwitchDB");
             services.AddDbContext<SwitchContext>(option => option.UseLazyLoadingProxies()
                                                  .UseMySql(conn, m=> m.MigrationsAssembly("Switch.Infra.Data")));
+            services.AddMvcCore();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
