@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Switch.Infra.Data;
+using Switch.Infra.Data.Context;
 
 namespace Switch.API
 {
@@ -27,7 +24,7 @@ namespace Switch.API
         {
             var conn = Configuration.GetConnectionString("SwitchDB");
             services.AddDbContext<SwitchContext>(option => option.UseLazyLoadingProxies()
-                                                 .UseMySql(conn, m=> m.MigrationsAssembly("Switch.Infra.Data")));
+                                                 .UseMySql(conn, m => m.MigrationsAssembly("Switch.Infra.Data")));
             services.AddMvcCore();
         }
 
