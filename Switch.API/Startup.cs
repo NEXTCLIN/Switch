@@ -11,7 +11,7 @@ namespace Switch.API
 {
     public class Startup
     {
-        IConfiguration Configuration { get; set; }
+        public IConfiguration Configuration { get; }
         public Startup(IConfiguration configuration)            
         {
             var builder = new ConfigurationBuilder().AddJsonFile("config.json");

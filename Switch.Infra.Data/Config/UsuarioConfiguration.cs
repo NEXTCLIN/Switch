@@ -13,9 +13,10 @@ namespace Switch.Infra.Data.Config
             builder.Property(u => u.Nome).HasMaxLength(400).IsRequired();
             builder.Property(u => u.SobreNome).HasMaxLength(400).IsRequired();
             builder.Property(u => u.Email);
-            builder.Property(u => u.DataNascimento);
-            builder.Property(u => u.Sexo);
-            builder.Property(u => u.UrlFoto);
+            builder.Property(u => u.Senha).HasMaxLength(50).IsRequired();
+            builder.Property(u => u.DataNascimento).IsRequired();
+            builder.Property(u => u.Sexo).IsRequired();
+            builder.Property(u => u.UrlFoto).HasMaxLength(400).IsRequired();
          
 
         }
